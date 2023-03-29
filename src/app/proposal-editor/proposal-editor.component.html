@@ -1,0 +1,124 @@
+<div class="title-bar">
+    <div class="title">{{ title }}</div>
+</div>
+
+<div class="container">
+    <div class="form-container">
+    <form [formGroup]="proposalForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-25">
+                <label for="contact-name">Contact Name: </label>
+            </div>
+            <div class="col-75">
+                <input id="contact-name" type="text" formControlName="contactName">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="job-title">Contact Job Title: </label>
+            </div>
+            <div class="col-75">
+                <input id="job-title" type="text" formControlName="jobTitle">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="contact-email">Contact Email: </label>
+            </div>
+            <div class="col-75">
+                <input id="contact-email" type="text" formControlName="contactEmail">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="contact-phone">Contact Phone: </label>
+            </div>
+            <div class="col-75">
+                <input id="contact-phone" type="text" formControlName="contactPhone">
+            </div>
+        </div>
+
+        <div formGroupName="address">
+            <p><strong>Organization Address</strong></p>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="street">Street: </label>
+                </div>
+                <div class="col-75">
+                    <input id="street" type="text" formControlName="street">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="zip">Zip Code: </label>
+                </div>
+                <div class="col-75">
+                    <input id="zip" type="text" formControlName="zip" (ngModelChange)="zipCodeChanged()">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="city">City: </label>
+                </div>
+                <div class="col-75">
+                    <input id="city" type="text" formControlName="city">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="state">State: </label>
+                </div>
+                <div class="col-75">
+                    <input id="state" type="text" formControlName="state">
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-25">
+                <label for="project-title">Project Title: </label>
+            </div>
+            <div class="col-75">
+                <input id="project-title" type="text" formControlName="projectTitle">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="project-description">Description of Project: </label>
+            </div>
+            <div class="col-75">
+                <textarea id="project-description" type="text" style="height:100px"
+                    formControlName="projectDescription"> </textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="technical-skill">Technical Skills Required: </label>
+            </div>
+            <div class="col-75">
+                <input id="technical-skill" type="text" formControlName="technicalSkill">
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <button type="submit" [disabled]="!proposalForm.valid">Submit</button>
+        </div>
+
+    </form>
+</div>
+</div>
+
+<p>Form Status: {{ proposalForm.status }}</p>

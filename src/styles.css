@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+/* General button styling */
+.delete-btn {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+  }
+  
+  /* Button hover effect */
+  .delete-btn:hover {
+    background-color: #c62828; /* Darker red */
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: #5342e8; /* Blue */
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+  }
+  
+  /* Button hover effect */
+  .edit-btn:hover {
+    background-color: #2008be; /* Darker Blue */
+    color: white;
+  }
+
+  .add-btn {
+    background-color: #50e842; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+  }
+  
+
+  /* Button hover effect */
+  .add-btn:hover {
+    background-color: #099c1d; /* Darker Green */
+    color: white;
+  }
+
+
+
+.title-bar {
+  background-color: #333;
+  font-style: italic;
+  margin-bottom: 3%;
+  color: #fff;
+  display: flex;
+  position:relative;
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  line-height: 200%;
+  flex:1 0 auto;
+  
+  background:rgba(0,0,0,.5)
+}
+
+.title-button, .button {
+  position:absolute;
+  right: 8px;
+  top: 6px;
+}

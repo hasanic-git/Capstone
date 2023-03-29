@@ -1,0 +1,44 @@
+<div class="title-bar">
+    <div class="title">{{ title }}</div>
+    <!-- <div class="title-button">
+        <a routerLink="/add-project">Add New Project</a>
+        <button class="add-btn" (click)="onAdd()">Add New Project</button>
+    </div> -->
+</div>
+
+
+<div>
+    <table border="1">
+        <tr>
+            <th>Contact Name</th>
+            <th>Job Title</th>
+            <th>Contact Email</th>
+            <th>Contact Phone</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Project Title</th>
+            <th>Project Description</th>
+            <th>Technical Skill</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let project of projects let i = index">
+            <td>{{project.contactName}}</td>
+            <td>{{project.jobTitle}}</td>
+            <td>{{project.contactEmail}}</td>
+            <td>{{project.contactPhone}}</td>
+            <td>{{project.address.street}}</td>
+            <td>{{project.address.city}}</td>
+            <td>{{project.address.state}}</td>
+            <td>{{project.address.zip}}</td>
+            <td>{{project.projectTitle}}</td>
+            <td>{{project.projectDescription}}</td>
+            <td>{{project.technicalSkill}}</td>
+            <td>
+                <button class="edit-btn" (click)="onEdit(project._id)">Edit</button>
+                <button class="delete-btn" (click)="onDelete(project._id)" style="margin-left:6px">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
